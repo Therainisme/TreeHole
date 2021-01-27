@@ -1,0 +1,59 @@
+.container .player{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.container .player .panel{
+    width: 700px;
+    height: 200px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.container .player .panel .name{
+    font-size: 40px;
+    font-family: syqssh;
+    color: #e6e6e6;
+    /*text-align: center;*/
+}
+
+
+.container .player .panel .control{
+
+}
+
+.container .player .cd{
+    background: url("http://therainisme.com:1225/Therainisme/img/cd.png") no-repeat center;
+    background-size: 100%;
+    width: 200px;
+    height: 100%;
+    display: inline-block;
+}
+
+
+.container .player .cd .img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    position: absolute;
+    overflow: hidden;
+    left: 75px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    animation: revolve 5s linear 0s infinite
+}
+
+@keyframes revolve {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

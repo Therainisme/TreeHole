@@ -1,0 +1,50 @@
+@font-face{
+    font-family:syqssh;
+    src:url('../assets/syqssh.ttf');
+}
+
+.container{
+
+}
+
+.container .background{
+    position: fixed;
+    background: url("http://therainisme.com:1225/Therainisme/img/welcome-3.jpg");
+    background-size: 100%;
+    width: 120%;
+    height: 120%;
+    transition: all 3.5s;
+    z-index: -1;
+    left: -120px;
+    top: -120px;
+}
+
+.container .word{
+    display: initial;
+    font-family: syqssh;
+    font-size: 80px;
+    color: white;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+.container .info{
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba(139, 139, 139, 0.37);
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 10px;
+
+    position: absolute;
+    display: block;
+    width: 900px;
+    height: 200px;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 40px;
+}
