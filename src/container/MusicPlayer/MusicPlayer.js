@@ -35,14 +35,18 @@ class MusicPlayer extends React.Component {
     }
 
     _changeWordByCurrentTime(currentTime) {
-
         if (this.state.words !== null) {
             let timeStr = this._getWordsTimeStr(this.state.words[this.state.wordsIndex])
             const word = this.state.words[this.state.wordsIndex].substring(timeStr.length + 2, this.state.words[this.state.wordsIndex].length)
             const wordTime = this._parseWordsTimeStr(timeStr)
             if (currentTime >= wordTime - 0.5) {
                 this.props.changeWordFuntion(word)
-                this.setState({wordsIndex: this.state.wordsIndex + 1})
+                if (this.state.wordsIndex !== this.state.words.length - 1) {
+                    this.setState({wordsIndex: this.state.wordsIndex + 1})
+                }
+            }
+            if (currentTime < 0.8) {
+                this.setState({wordsIndex: 0})
             }
         }
     }
