@@ -8,7 +8,8 @@ class Container extends React.Component {
         super();
         this.state = {
             left: -120,
-            right: -120
+            right: -120,
+            word: ''
         }
     }
 
@@ -23,6 +24,10 @@ class Container extends React.Component {
             left : -20 - x,
             top : -20 -y
         })
+    }
+
+    _changeWord(word){
+        this.setState({word})
     }
 
     componentDidMount() {
@@ -41,9 +46,16 @@ class Container extends React.Component {
         return (
             <div className='container'>
                 <div className='background' style={{'left': this.state.left, 'top': this.state.top}}></div>
-                <div className='word'>会不会我们的爱，会被风吹向大海</div>
+                <div className='mask' id='mask'></div>
+                <div className='word'>{this.state.word}</div>
                 <div className='info'>
-                    <MusicPlayer/>
+                    <MusicPlayer
+                        changeWordFuntion={this._changeWord.bind(this)}
+                        name={'星辰大海 - 黄霄云'}
+                        wordsUrl={'/static/星辰大海.lrc'}
+                        audioUrl={'/static/星辰大海.m4a'}
+                        posterUrl={'/static/poster.jpg'}
+                    />
                 </div>
             </div>
         );

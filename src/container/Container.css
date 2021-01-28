@@ -9,14 +9,24 @@
 
 .container .background{
     position: fixed;
-    background: url("http://therainisme.com:1225/Therainisme/img/welcome-3.jpg");
-    background-size: 100%;
+    background: url("../assets/dahai.png");
+    background-size: cover;
     width: 120%;
     height: 120%;
     transition: all 3.5s;
     z-index: -1;
     left: -120px;
     top: -120px;
+}
+
+.container .mask{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 1;
+    opacity: 1;
+    transition: all 2s;
 }
 
 .container .word{
@@ -30,14 +40,15 @@
     transform: translateX(-50%);
     width: 100%;
     text-align: center;
+    text-shadow: 0 0 5px black;
 }
 
 .container .info{
-    background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba(139, 139, 139, 0.37);
-    backdrop-filter: blur( 20px );
-    -webkit-backdrop-filter: blur( 20px );
-    border-radius: 10px;
+    /*background: rgba( 255, 255, 255, 0.25 );*/
+    /*box-shadow: 0 8px 32px 0 rgba(139, 139, 139, 0.37);*/
+    /*backdrop-filter: blur( 20px );*/
+    /*-webkit-backdrop-filter: blur( 20px );*/
+    /*border-radius: 10px;*/
 
     position: absolute;
     display: block;
